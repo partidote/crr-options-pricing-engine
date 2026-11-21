@@ -1,0 +1,20 @@
+market_data:
+  tickers: ["SPY", "AAPL"]
+  risk_free_ticker: "^IRX"
+  default_risk_free_rate: 0.045
+  max_expiries: 4
+
+filters:
+  min_volume: 1
+  min_open_interest: 10
+  min_bid: 0.05
+  max_rel_spread: 0.20
+  moneyness_bounds: [0.80, 1.20]
+
+pricing:
+  crr_steps: 200
+  bsm_convergence_tol: 0.01
+
+paths:
+  raw_dir: "data/raw"
+  processed_dir: "data/processed"
